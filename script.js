@@ -1,35 +1,35 @@
 // module for a gameboard 
 const gameboard =  (function() {
     // store the gameboard as an array inside of a Gameboard object
-        const board = [ [0,0,0], [0,0,0], [0,0,0] ];
-        const gameboard = {grid: gridArray, gameStart: false, gameEnd: false};
+        let board = [ [0,0,0], [0,0,0], [0,0,0] ];
 
         return {
-            
+
         }
 });
-        // access the 1st row, 3rd column of the grid inside of the gameboard object
-                gameboard.grid[0][2] = 1;
-
 
         
 // module for displayController
 const displayController = (function() {
-
+        let = () => {}
+        return {
+            
+        }
 });
 
 // factory for players ( two ), players should be stored as objects
-const playerFactory = (name, score) => {
-    return {
-        name: name, 
-        score: score,
-
-        getPlayerStatus() {
-            return name + ' ' + score;
+const playerFactory = (mark, score) => {
+    let getPlayer = () => {
+        return {
+            mark: mark, 
+            score: score,
         }
     }
+    
 };
 
+let player1 = playerFactory('1', 'X');
+let player2 = playerFactory('2', 'O');
 
 // object to control the flow of the game
 
