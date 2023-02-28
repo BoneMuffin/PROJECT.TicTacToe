@@ -4,6 +4,7 @@
     --white: rgb(250, 250, 255);
     --light-purple: rgb(228, 217, 255);
     --lobster: rgb(255, 83, 56);
+    --box-hover: rgba(181, 255, 142, 0.5);
 }
 
 @font-face {
@@ -11,38 +12,49 @@
     src: url(Media/CatCafe.ttf)
 }
 
-* {
-    box-sizing: border-box;
-    font-family: CatCafe;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: CatCafe;
 }
 
 html {
+    position: relative;
     background: url(Media/paper1.png);
+    min-height: 100vh;
 }
 
 body {
     height: 100vh;
     width: 100vw;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    line-height: 1.6;
+
+    margin-bottom: 80px;
     justify-content: center;
 }
 
 header {
     display: flex;
     justify-content: center;
+    padding: 20px;
     color: var(--black);
     align-items: center;
     font-size: 32px;
 }
 
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
 main {
     height: 100%;
-    width: min(800px, 100%);
-    display: grid;
-    grid-template-rows: 2fr 5fr 3fr;
     color: var(--black);
+    padding: 20px 0;
+    text-align: center;
 }
 
 footer {
@@ -63,7 +75,7 @@ footer {
 
 #players {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 32px;
 }
 
@@ -75,33 +87,44 @@ footer {
     color: var(--lobster);
 }
 
-.gameBoard {
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 454px;
+    height: 454px;
+    margin: 0px auto;
 }
 
 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    font-size: 100px;
+    text-align: center;
+    cursor: pointer;
 }
 
-/* Setting up borders between game spaces */
-#space-7,
-#space-8,
-#space-9,
-#space-4,
-#space-5,
-#space-6 {
-    border-bottom: 2px solid var(--black);
+.box:hover {
+    background-color: var(--box-hover);
+  }
+
+/* gameboard borders */
+#s7,
+#s8,
+#s9,
+#s4,
+#s5,
+#s6 {
+    border-bottom: 2.2px solid var(--black);
 }
 
-#space-7,
-#space-8,
-#space-4,
-#space-5,
-#space-1,
-#space-2 {
-    border-right: 2px solid var(--black);
+#s7,
+#s8,
+#s4,
+#s5,
+#s1,
+#s2 {
+    border-right: 2.2px solid var(--black);
 }
 
 /* MEDIA QUERIES */
