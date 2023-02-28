@@ -9,8 +9,8 @@ const gameboard =  (function() {
 });
 
         
-// module for displayController
-const displayController = (function() {
+// module for array display to the gameboard
+const renderController = (function() {
         let = () => {}
         return {
             
