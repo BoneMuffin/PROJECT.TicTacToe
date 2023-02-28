@@ -46,44 +46,59 @@ header {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
 }
 
 main {
     height: 100%;
     color: var(--black);
-    padding: 20px 0;
     text-align: center;
 }
 
 footer {
     background-color: var(--black);
     color: var(--white);
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .controls {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
 }
 
 #vsAI,
 #vsHuman {
     cursor: pointer;
     justify-self: center;
+    font-size: 30px;
+    padding: 10px 0px;
 }
 
 #players {
     display: flex;
-    justify-content: space-evenly;
-    font-size: 32px;
+    justify-content: space-around;
+    font-size: 35px;
 }
 
-.currentPlayer {
-    color: var(--lobster);
-}
-
-.winningMove {
+.currentPlayer,
+.winningMove  {
     color: var(--lobster);
 }
 
@@ -94,6 +109,8 @@ footer {
     height: 454px;
     margin: 0px auto;
 }
+
+/* boxes */
 
 .box {
     width: 150px;
@@ -128,3 +145,44 @@ footer {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width: 660px) {
+    h1 {
+      font-size: 60px;
+    }
+  
+    .controls {
+      font-size: 40px;
+    }
+  
+    #players, #vsAI, #vsHuman {
+      font-size: 40px;
+    }
+
+  
+    .gameboard {
+      width: 304px;
+      height: 304px;
+    }
+  
+    .box {
+      width: 100px;
+      height: 100px;
+      font-size: 70px;
+    }
+  }
+
+  
+@media (max-width: 420px) {
+    h1 {
+      font-size: 50px;
+    }
+  
+    .controls {
+      font-size: 36px;
+    }
+  
+    #players, #vsAI, #vsHuman {
+      font-size: 36px;
+    }
+}
