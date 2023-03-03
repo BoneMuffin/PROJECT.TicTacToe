@@ -1,35 +1,37 @@
-// module for a gameboard 
-const gameboard =  (function() {
+// module for the gameboard 
+const gameBoard =  (function() {
     // store the gameboard as an array inside of a Gameboard object
-        let board = [ [0,0,0], [0,0,0], [0,0,0] ];
-
-        return {
-
-        }
+        let board = [ 
+            [0,0,0], 
+            [0,0,0], 
+            [0,0,0] 
+        ];
+        return {board}
 });
 
-        
-// module for array display to the gameboard
-const renderController = (function() {
-        let = () => {}
-        return {
-            
-        }
+// module for the players to take turns
+let displayController = (function() {
+    let test = () => {};
+    return {};
 });
 
 // factory for players ( two ), players should be stored as objects
-const playerFactory = (mark, score) => {
-    let getPlayer = () => {
-        return {
-            mark: mark, 
-            score: score,
-        }
-    }
-    
+const playerFactory = (name, mark) => {
+        return {name: name, mark: mark}
 };
 
-let player1 = playerFactory('1', 'X');
-let player2 = playerFactory('2', 'O');
+const player1 = playerFactory('Player 1', 'X');
+const player2 = playerFactory('Player 2', 'O');
+displayController;
+        
+// module for array display to the gameboard
+const renderArray = (function() {
+       const boxes = document.querySelectorAll('.box');
+       boxes[0].textContent = gameBoard.board;
+        return {}
+});
+
+
 
 // object to control the flow of the game
 
