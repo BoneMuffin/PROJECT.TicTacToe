@@ -1,22 +1,21 @@
-const boxes = document.querySelectorAll('.box');
 const player1 = document.querySelector("#p1");
 const player2 = document.querySelector("#p2");
 const vsHuman = document.querySelector('#vsHuman');
 const vsAI = document.querySelector('#vsAI');
 
 // module for the gameboard 
-const gameBoard =  (function() {
+const GameBoard =  (function() {
     // store the gameboard as an array inside of a Gameboard object
-        let board = [ 
-            [0, 0, 0], 
-            [0, 0, 0], 
-            [0, 0, 0] 
-        ];
-        return {board}
+        let board = ["", "", "", "", "", "", "", "", ""];
+        
+        //board is inaccessible to other modules, but they can fetch it
+        const getBoard = () => {
+            return board;
+            }
 })();
 
 // module for the players to take turns
-let displayController = (function() {
+let DisplayController = (function() {
     let test = () => {};
     return {};
 })();
@@ -28,11 +27,13 @@ const playerFactory = (name, mark) => {
 
 let Player1 = playerFactory('Player 1', 'X');
 let Player2 = playerFactory('Player 2', 'O');
-displayController;
+DisplayController;
         
 // module for array display to the gameboard
-const renderArray = (function() {
-       boxes[0].textContent = gameBoard.board;
+const RenderArray = (function() {
+
+    const boxes = document.querySelectorAll('.box');
+    boxes[0].textContent = GameBoard.board;
         return {}
 })();
 
