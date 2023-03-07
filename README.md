@@ -1,6 +1,4 @@
-## Live preview ##
-![](./Media/preview.png)
-(https://bonemuffin.github.io/PROJECT.TicTacToe/)
+## Live demo [here](https://bonemuffin.github.io/PROJECT.TicTacToe/)
 
 ## Built with the use of
 - HTML
@@ -15,3 +13,6 @@
 * Learned deeper responsive mobile design
 * @media query usage
 * adding IA
+
+## Preview ##
+![](./Media/preview.png)
