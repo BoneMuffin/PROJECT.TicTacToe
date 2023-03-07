@@ -1,6 +1,6 @@
 ## Live preview ##
 ![](./Media/preview.png)
-[here](https://bonemuffin.github.io/PROJECT.TicTacToe/)
+(https://bonemuffin.github.io/PROJECT.TicTacToe/)
 
 ## Built with the use of
 - HTML
