@@ -5,6 +5,8 @@
     --lobster: rgb(255, 49, 17);
     --box-hover: rgba(181, 255, 142, 0.5);
     --red-hover: rgba(255, 142, 142, 0.5);
+    --blue-hover: rgba(91, 85, 255, 0.5);
+
 }
 
 @font-face {
@@ -87,8 +89,15 @@ a:hover {
 #vsHuman {
     cursor: pointer;
     justify-self: center;
+    border-radius: 12px;
+    width: 250px;
     font-size: 30px;
     padding: 10px 0px;
+}
+
+#vsAI:hover, 
+#vsHuman:hover {
+  background-color: var( --blue-hover);
 }
 
 #players {
@@ -109,6 +118,7 @@ a:hover {
     height: 454px;
     margin: 0px auto;
 }
+
 
 /* boxes */
 
