@@ -215,7 +215,8 @@ const Game = (function() {
             if (!checkGameOver()) {
                 // Human Turn
                 currentPlayer.makeMove(board, index);
-                if (currentPlayer.checkIfWon(currentPlayer.showInputs())) {
+                if (currentPlayer.checkIfWon(currentPlayer.showInputs()).won) {
+                    GameBoard.showWinningMove(currentPlayer.checkIfWon(currentPlayer.showInputs()).move);
                     setCurrentGameMode(null);
                 } else {
                     currentPlayer = player2;
